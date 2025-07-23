@@ -30,7 +30,7 @@ public class NinjaController {
 
     @GetMapping("/{id}")
     public ResponseEntity<GlobalResponse<NinjaResponse>> buscarPorId(@PathVariable("id") Long id) {
-        return ResponseEntity.status(HttpStatus.ACCEPTED).body(service.buscarPorId(id));
+        return ResponseEntity.ok().body(service.buscarPorId(id));
     }
 
     @PutMapping("/{id}")
@@ -41,7 +41,7 @@ public class NinjaController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<GlobalResponse<NinjaResponse>> deletarPorId(@PathVariable("id") Long id) {
-        return ResponseEntity.status(HttpStatus.ACCEPTED).body(service.deletarPorId(id));
+        return ResponseEntity.ok().body(service.deletarPorId(id));
     }
 
 
